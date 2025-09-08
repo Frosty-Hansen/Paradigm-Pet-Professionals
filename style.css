@@ -170,9 +170,61 @@ footer {
   height: 100px;
   object-fit: cover;
   margin-bottom: 10px;
-  border-radius: 50%;  
+  border-radius: 50%;
+}  
 
 .animal-btn span {
   font-weight: bold;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .primary-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-buttons {
+    gap: 15px;
+  }
+
+  main {
+    padding: 10px;
+  }
+  .animal-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .animal-img, .animal-text {
+    width: 100%;
+  }
+}
+.animal-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.animal-img {
+  width: 40%;          
+  max-width: 400px;     
+  height: auto;         
+  border-radius: 10px;  
+  object-fit: cover;    
+}
+
+.animal-text {
+  width: 55%;
+}
+
+.center-text {
+  text-align: center; 
 }
