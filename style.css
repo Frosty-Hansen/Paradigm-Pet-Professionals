@@ -138,3 +138,41 @@ footer {
   margin-top: 20px;
   text-align: center;
 }
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;         
+  margin: 40px 0;
+  flex-wrap: wrap;   
+}
+
+.animal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #6699CC; 
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 180px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.animal-btn:hover {
+  transform: translateY(-5px);
+  background: #003B6D;  
+}
+
+.animal-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;  
+
+.animal-btn span {
+  font-weight: bold;
+  text-align: center;
+}
