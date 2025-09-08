@@ -9,10 +9,15 @@ body {
 
 
 header {
+  display: flex;
+  align-items: center;     
+  justify-content: space-between; 
   background: #003b6d;
-  color: white;
-  padding: 20px;
-  text-align: center;  
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 60px;
 }
 
 header h1, 
@@ -25,7 +30,8 @@ header .slogan {
   list-style: none;
   padding: 0;
   margin: 15px 0;
-  text-align: center;  
+  display: flex;
+  gap: 20px;  
 }
 
 .primary-nav li {
@@ -43,12 +49,30 @@ header .slogan {
   text-decoration: underline;
 }
 
+.logo-link {
+  display: inline-block;
+}
+
 
 .breadcrumbs {
   margin: 10px 0;
   font-size: 14px;
   color: #666;
   text-align: center;
+}
+
+.breadcrumbs a {
+  color: #003b6d;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+
+.breadcrumbs span {
+  color: #999;
 }
 
 
