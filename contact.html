@@ -9,8 +9,8 @@
 <body>
   <header>
     <a href="index.html" class="logo-link">
-    <img src="images/animal-logo.png" alt="Paradigm Pet Professionals Logo" class="logo">
-  </a>
+      <img src="images/animal-logo.png" alt="Paradigm Pet Professionals Logo" class="logo">
+    </a>
     <nav>
       <ul class="primary-nav">
         <li><a href="index.html">Home</a></li>
@@ -26,19 +26,29 @@
   <main>
     <nav class="breadcrumbs">
       <a href="index.html">Home</a> &gt; 
-      <span>contact</span> 
+      <span>Contact</span> 
     </nav>
-
-
 
     <h2>Request a Consultation</h2>
     <p>Please complete all fields. We will respond within 48 hours.</p>
 
-    <form>
+    <form id="contactForm">
       <label>Name: <input type="text" required></label><br><br>
       <label>Email: <input type="email" required></label><br><br>
       <label>Phone: <input type="tel" required></label><br><br>
-      <label>Time Zone: <input type="text" required></label><br><br>
+
+      <label for="timezone">Time Zone:</label>
+      <select id="timezone" name="timezone" required>
+        <option value="" disabled selected>Select your time zone</option>
+        <option value="EST">Eastern Standard Time (EST)</option>
+        <option value="CST">Central Standard Time (CST)</option>
+        <option value="MST">Mountain Standard Time (MST)</option>
+        <option value="PST">Pacific Standard Time (PST)</option>
+        <option value="AKST">Alaska Standard Time (AKST)</option>
+        <option value="HST">Hawaii-Aleutian Standard Time (HST)</option>
+        <option value="AST">Atlantic Standard Time (AST)</option>
+      </select><br><br>
+
       <label>Pet Name: <input type="text" required></label><br><br>
       <label>Pet Type: 
         <select required>
@@ -50,9 +60,20 @@
       </label><br><br>
       <label>Pet Age: <input type="number" min="0" required></label><br><br>
       <label>Message: <textarea required></textarea></label><br><br>
+
       <button type="submit" class="btn primary">Submit Request</button>
     </form>
   </main>
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      alert('Request received! We will contact you within 48 hours.');
+      form.reset(); 
+    });
+  </script>
 
   <footer>
     <p>© 2025 Paradigm Pet Professionals</p>
